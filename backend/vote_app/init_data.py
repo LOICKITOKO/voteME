@@ -1,24 +1,28 @@
 from vote_app.models import Category, Nominee
 
 def create_categories_and_nominees():
-    data = {
-        "Meilleur artiste": ["Ninho", "Aya Nakamura", "Tiakola"],
-        "Rappeur": ["SDM", "Gazo", "Hamza"],
-        "Chanteur": ["Tayc", "Dadju", "Franglish"],
-        "DJ": ["DJ Snake", "DJ Kore", "DJ Myst"],
-        "Révélation": ["Werenoi", "Ronisia", "Ziak"],
-        "Groupe de danse": ["Les Twins", "Serial Stepperz", "Swaggers"],
-        "Web media": ["Booska-P", "Rapunchline", "GQ France"],
-        "Humoriste": ["Paul Mirabel", "Inès Reg", "Redouane Bougheraba"],
-        "Influenceur": ["Léna Situations", "Michou", "Just Riadh"],
-        "Ambassadeur": ["Kylian Mbappé", "Omar Sy", "Aya Nakamura"],
-        "Collaboration": ["Hamza x Damso", "Tiakola x Gazo", "Ninho x Ayra Starr"],
-        "Performance live": ["Damso à Bercy", "Niska au Zénith", "Aya à l'Accor Arena"],
-        "Réalisateur": ["Ladj Ly", "Maïmouna Doucouré", "Romain Gavras"],
-    }
+    categories = [
+        "Meilleur artiste",
+        "Rappeur",
+        "Chanteur",
+        "DJ",
+        "Révélation",
+        "Groupe de danse",
+        "Web media",
+        "Humoriste",
+        "Influenceur",
+        "Ambassadeur",
+        "Collaboration",
+        "Performance live",
+        "Réalisateur",
+    ]
 
-    for name, nominees in data.items():
+    for name in categories:
         slug = name.lower().replace(" ", "-").replace("é", "e").replace("à", "a")
         category, _ = Category.objects.get_or_create(name=name, slug=slug)
-        for nominee_name in nominees:
-            Nominee.objects.get_or_create(name=nominee_name, category=category)
+        for i in range(1, 5):
+            Nominee.objects.get_or_create(
+                name=f"Nominee {i}",
+                category=category,
+                defaults={"image_url": "https://via.placeholder.com/150"}
+            )

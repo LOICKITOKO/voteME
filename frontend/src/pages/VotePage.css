@@ -27,7 +27,7 @@ body {
   padding: 40px;
   width: 100%;
   text-align: center;
-  color: #fff;
+  color: #ffd700;
 }
 
 /* Section de l'intro */
@@ -40,7 +40,7 @@ body {
 
 .intro-text p {
   font-size: 1.2em;
-  color: #ddd;
+  color: #fff;
   margin-bottom: 30px;
 }
 
@@ -48,9 +48,7 @@ body {
   display: inline-block;
   margin-top: 30px;
   padding: 10px;
-  background-color: #2a2a2a;
   border-radius: 50%;
-  border: 3px solid #ffd700;
 }
 
 .trophy-image {
@@ -96,7 +94,7 @@ body {
 
 .artist-name {
   font-size: 1.1em;
-  color: #ffd700;
+  color: #fff;
   margin-top: 10px;
   font-weight: 600;
 }

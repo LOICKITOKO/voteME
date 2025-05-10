@@ -4,7 +4,6 @@ from .models import Category, Nominee, Vote
 from .serializers import CategorySerializer, VoteSerializer
 from rest_framework import status
 from django.http import JsonResponse
-from django.shortcuts import render
 
 @api_view(['GET'])
 def all_categories(request):
@@ -21,9 +20,6 @@ def category_detail(request, slug):
     
     serializer = CategorySerializer(category)
     return Response(serializer.data)
-
-def home(request):
-    return render(request, 'home.html')
 
 @api_view(['POST'])
 def vote(request):

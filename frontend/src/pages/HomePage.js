@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './HomePage.css';
-import trophyImage from './images/trophy.png'; // <-- import depuis src/images
+import trophyImage from '../images/trophy.png'; // <-- import depuis src/images
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -12,7 +12,7 @@ const HomePage = () => {
 
   return (
     <div className="home-container">
-      <h1 className="home-title">Bienvenue sur VoteME</h1>
+      <h1 className="home-title">Bienvenue sur P/N AWARDS</h1>
 
       <div className="trophy-placeholder">
         <div className="image-box">

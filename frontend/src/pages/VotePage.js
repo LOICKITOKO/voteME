@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './VotePage.css';
+import trophyImage from '../images/trophy.png'; // <-- Importer l'image du trophée depuis src/images
 
 const VotePage = () => {
   const [categories, setCategories] = useState([]);
@@ -47,15 +48,25 @@ const VotePage = () => {
       {!votingFinished ? (
         <div>
           <div className="intro-text">
-            <h1>Bienvenue à la Cérémonie des Vœux !</h1>
+            <h1> VOTES!</h1>
             <p>
-              C'est le moment de faire entendre votre voix ! Choisissez les meilleurs artistes, 
-              rappeurs, chanteurs, et bien plus encore. Chaque vote compte pour l'événement 
-              le plus attendu de l'année.
+              Vote pour l’artiste qui le mérite vraiment. 
+              Vote avec ton cœur, avec respect, avec fierté.
             </p>
             <div className="trophy-box">
-              {/* Cette case contiendra l'image du trophée */}
-              <img src="https://via.placeholder.com/150" alt="Trophée" className="trophy-image" />
+              {/* Cette case contient l'image du trophée */}
+              <img 
+                src={trophyImage} 
+                alt="Trophée" 
+                className="trophy-image" 
+                style={{
+                  width: '150px', 
+                  height: '150px', 
+                  objectFit: 'cover', 
+                  borderRadius: '50%',
+                  boxShadow: '0 4px 15px rgba(0, 0, 0, 0.3)'
+                }} 
+              />
             </div>
             <p>
               Vous êtes à un pas de faire une différence, alors faites vos choix avec soin !
