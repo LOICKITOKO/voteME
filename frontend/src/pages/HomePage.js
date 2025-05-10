@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './HomePage.css';
+import trophyImage from './images/trophy.png'; // <-- import depuis src/images
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -14,8 +15,18 @@ const HomePage = () => {
       <h1 className="home-title">Bienvenue sur VoteME</h1>
 
       <div className="trophy-placeholder">
-        {/* Tu remplaceras ce bloc par une image réelle plus tard */}
-        <div className="image-box">Trophée ici</div>
+        <div className="image-box">
+          <img 
+            src={trophyImage}
+            alt="Trophée Awards"
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              borderRadius: '15px'
+            }}
+          />
+        </div>
       </div>
 
       <p className="rules-text">

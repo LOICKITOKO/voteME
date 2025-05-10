@@ -1,7 +1,7 @@
 /* Home.css */
 
 .home-container {
-  background-color: #0e0e0e;
+  background-color: #0b0b0b; /* Noir profond */
   color: #ffffff;
   min-height: 100vh;
   padding: 40px 20px;
@@ -14,45 +14,48 @@
 
 .home-title {
   font-size: 3rem;
-  color: #1e90ff;
+  color: #ffd700; /* Doré */
   margin-bottom: 40px;
   font-weight: bold;
-  text-shadow: 2px 2px #000;
+  text-shadow: 2px 2px 6px rgba(255, 215, 0, 0.5); /* Ombre dorée */
 }
 
 .trophy-placeholder .image-box {
   width: 200px;
   height: 200px;
-  background-color: #333;
-  border: 3px solid #1e90ff;
+  background-color: #222;
+  border: 3px solid #ffd700; /* Bordure dorée */
   border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.2rem;
-  color: #999;
+  color: #aaa;
   margin-bottom: 40px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
 }
 
 .rules-text {
   font-size: 1.2rem;
-  color: #ccc;
+  color: #ddd;
   line-height: 1.6;
   margin-bottom: 40px;
   max-width: 600px;
 }
 
 .start-button {
-  background-color: #1e90ff;
-  color: white;
+  background-color: #ffd700;
+  color: #000;
   padding: 14px 30px;
   font-size: 1.1rem;
   border: none;
   border-radius: 25px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+  font-weight: bold;
 }
 
 .start-button:hover {
-  background-color: #006ad1;
+  background-color: #e6c200;
+  transform: scale(1.05);
 }
