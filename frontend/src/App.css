@@ -1,0 +1,30 @@
+.nominee-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.nominee {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.nominee-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.nominee-image:hover {
+  transform: scale(1.1);
+}
+
+.nominee p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
