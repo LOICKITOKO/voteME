@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './HomePage.css';
 import trophyImage from '../images/trophy.png'; // <-- import depuis src/images
+import secondTrophyImage from '../images/secondTrophy.png'; // <-- nouvelle image à droite
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -14,11 +15,26 @@ const HomePage = () => {
     <div className="home-container">
       <h1 className="home-title">Bienvenue sur P/N AWARDS</h1>
 
-      <div className="trophy-placeholder">
-        <div className="image-box">
+      <div className="trophy-placeholder" style={{ display: 'flex', justifyContent: 'space-between' }}>
+        {/* Première image dans sa boîte */}
+        <div className="image-box" style={{ marginRight: '10px' }}> {/* Ajout de la marge à droite */}
           <img 
             src={trophyImage}
             alt="Trophée Awards"
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              borderRadius: '15px'
+            }}
+          />
+        </div>
+
+        {/* Deuxième image dans sa boîte, à droite */}
+        <div className="image-box">
+          <img 
+            src={secondTrophyImage}
+            alt="Deuxième Trophée"
             style={{
               width: '100%',
               height: '100%',
